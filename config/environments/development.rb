@@ -33,6 +33,10 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
+  host = '02b0a5b04a0f4223a7e8485e07c8f8f8.vfs.cloud9.us-east-2.amazonaws.com' # 不要原封不动使用这个域名，
+# 应该使用你本地的开发主机地址
+# 在云端 IDE 中使用这一行
+ config.action_mailer.default_url_options = { host: host, protocol: 'https' }
 
   config.action_mailer.perform_caching = false
 
