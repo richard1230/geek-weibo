@@ -2,6 +2,9 @@ source 'https://gems.ruby-china.com'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails', '6.0.1'
+gem 'active_storage_validations', '0.8.2'
+gem 'image_processing', '1.9.3'
+gem 'mini_magick',       '4.9.5'
 gem 'puma', '3.12.2'
 gem 'sass-rails', '5.1.0'
 gem 'bootstrap-sass', '3.4.1'
@@ -36,6 +39,7 @@ end
 
 group :production do
  gem 'pg', '1.1.4'
+ gem 'aws-sdk-s3', '1.46.0', require: false
 end
 
 
